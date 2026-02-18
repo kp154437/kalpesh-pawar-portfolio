@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Plus, X, Star } from 'lucide-react';
 import { getTestimonials, addTestimonial, type Testimonial } from '../lib/content';
+import { sendNotification } from '../lib/email';
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
@@ -27,6 +28,14 @@ const Testimonials = () => {
                 ...formData,
                 date: new Date().toISOString()
             });
+
+            // Send Notification
+            sendNotification({
+                from_name: formData.name,
+                from_email: "Reviewer", // Testimonials don't ask for email usually
+                message: `New Testimonial Received:\nName: ${formData.name}\nRole: ${formData.role}\nRating: ${formData.rating} Stars\nReview: ${formData.text}`
+            });
+
             setFormData({ name: '', role: '', text: '', rating: 5 });
             setSubmitted(true);
             loadTestimonials();

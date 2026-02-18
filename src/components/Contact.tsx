@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, Loader2 } from 'lucide-react';
 import { addMessage } from '../lib/content';
+import { sendNotification } from '../lib/email';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', mobile: '', message: '' });
@@ -17,6 +18,14 @@ const Contact = () => {
                 ...formData,
                 date: new Date().toISOString()
             });
+
+            // Send Notification
+            sendNotification({
+                from_name: formData.name,
+                from_email: formData.email,
+                message: `New Contact Form Submission:\nName: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}`
+            });
+
             setStatus('success');
             setFormData({ name: '', email: '', mobile: '', message: '' });
             setTimeout(() => setStatus('idle'), 5000);
