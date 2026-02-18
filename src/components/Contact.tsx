@@ -20,9 +20,11 @@ const Contact = () => {
             });
 
             // Send Notification
+            // Send Notification
             sendNotification({
                 from_name: formData.name,
                 from_email: formData.email,
+                from_mobile: formData.mobile,
                 message: `New Contact Form Submission:\nName: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}`
             });
 
