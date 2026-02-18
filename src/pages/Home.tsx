@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
@@ -40,12 +41,12 @@ const Home = () => {
                             {content?.heroSubtitle || "A self-taught developer transforming ideas into scalable, high-performance web applications."}
                         </p>
                         <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                            <a href="/portfolio" className="px-8 py-4 bg-cobalt hover:bg-blue-600 text-white rounded-full font-bold transition-all hover:shadow-[0_0_20px_rgba(45,91,255,0.4)]">
+                            <Link to="/portfolio" className="px-8 py-4 bg-cobalt hover:bg-blue-600 text-white rounded-full font-bold transition-all hover:shadow-[0_0_20px_rgba(45,91,255,0.4)]">
                                 View Projects
-                            </a>
-                            <a href="/contact" className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-full font-bold transition-all">
+                            </Link>
+                            <Link to="/contact" className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-full font-bold transition-all">
                                 Contact Me
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getProjects, type Project } from '../lib/content';
 
@@ -61,9 +62,9 @@ const ProjectShowcase = () => {
                     <p className="text-gray-300 mb-8 max-w-xl mx-auto relative z-10">
                         Let's turn your idea into a high-performing digital reality.
                     </p>
-                    <a href="/contact" className="relative z-10 inline-block px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    <Link to="/contact" className="relative z-10 inline-block px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                         Start a Project
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

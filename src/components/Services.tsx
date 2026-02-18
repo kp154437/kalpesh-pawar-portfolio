@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Layout, Palette, Server, Smartphone, Cpu, Users } from 'lucide-react';
 
 const services = [
@@ -76,7 +77,7 @@ const Services = () => {
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> Bug Fixing</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> Tech Consultation</li>
                             </ul>
-                            <a href="/contact" className="block text-center py-3 rounded-lg bg-white/5 hover:bg-cobalt hover:text-white transition-all font-bold text-sm">Book Now</a>
+                            <Link to="/contact" className="block text-center py-3 rounded-lg bg-white/5 hover:bg-cobalt hover:text-white transition-all font-bold text-sm">Book Now</Link>
                         </div>
 
                         <div className="glass-card p-8 rounded-2xl border border-cobalt/50 relative group shadow-[0_0_30px_rgba(45,91,255,0.1)] transform md:-translate-y-4">
@@ -88,7 +89,7 @@ const Services = () => {
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> UI/UX Design</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> Development & Deployment</li>
                             </ul>
-                            <a href="/contact" className="block text-center py-3 rounded-lg bg-cobalt text-white hover:bg-blue-600 transition-all font-bold text-sm">Start Project</a>
+                            <Link to="/contact" className="block text-center py-3 rounded-lg bg-cobalt text-white hover:bg-blue-600 transition-all font-bold text-sm">Start Project</Link>
                         </div>
 
                         <div className="glass-card p-8 rounded-2xl border border-white/5 relative group hover:border-cobalt/30 transition-colors">
@@ -99,7 +100,7 @@ const Services = () => {
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> Priority Support</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-cobalt" /> Regular Updates</li>
                             </ul>
-                            <a href="/contact" className="block text-center py-3 rounded-lg bg-white/5 hover:bg-cobalt hover:text-white transition-all font-bold text-sm">Discussion</a>
+                            <Link to="/contact" className="block text-center py-3 rounded-lg bg-white/5 hover:bg-cobalt hover:text-white transition-all font-bold text-sm">Discussion</Link>
                         </div>
                     </div>
                 </div>

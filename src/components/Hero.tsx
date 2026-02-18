@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -57,12 +58,12 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="flex flex-col md:flex-row gap-6 justify-center items-center"
                 >
-                    <a href="#projects" className="px-8 py-4 bg-cobalt hover:bg-blue-600 text-white rounded-full font-bold transition-all hover:shadow-[0_0_30px_rgba(45,91,255,0.4)] transform hover:-translate-y-1">
+                    <Link to="/portfolio" className="px-8 py-4 bg-cobalt hover:bg-blue-600 text-white rounded-full font-bold transition-all hover:shadow-[0_0_30px_rgba(45,91,255,0.3)] transform hover:-translate-y-1">
                         View My Work
-                    </a>
-                    <a href="#contact" className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-full font-bold transition-all border border-white/10 hover:border-white/20">
+                    </Link>
+                    <Link to="/contact" className="px-8 py-4 glass-card hover:bg-white/10 text-white rounded-full font-bold transition-all border border-white/10 hover:border-white/20">
                         Get In Touch
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
         </section>
