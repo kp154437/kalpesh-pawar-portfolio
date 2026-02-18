@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,7 +19,7 @@ import Dashboard from './pages/admin/Dashboard';
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="bg-obsidian min-h-screen text-white overflow-x-hidden font-sans selection:bg-cobalt selection:text-white">
           <Routes>
             {/* Admin Routes (No Navbar) */}
@@ -51,7 +51,7 @@ function App() {
             } />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
