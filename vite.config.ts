@@ -17,8 +17,8 @@ export default defineConfig({
         theme_color: '#000000',
         background_color: '#000000',
         display: 'standalone',
-        scope: './',
-        start_url: './',
+        scope: '/',
+        start_url: './#/admin/login',
         orientation: 'portrait',
         icons: [
           {
